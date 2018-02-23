@@ -2,6 +2,9 @@ package com.multithreading.demo2;
 
 import static com.multithreading.Common.hello;
 
+/**
+ * Creating new thread by implementing Runnable interface
+ */
 class Runner implements Runnable {
 
     @Override
