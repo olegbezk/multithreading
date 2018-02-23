@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
+/**
+ * Using multiple locks and synchronized code blocks
+ */
 public class Worker {
 
     private Random random = new Random();
