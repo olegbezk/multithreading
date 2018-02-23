@@ -2,6 +2,9 @@ package com.multithreading.demo4;
 
 import java.util.Scanner;
 
+/**
+ * Using volatile keyword for sharing variable in the thread
+ */
 class Processor extends Thread {
 
     private volatile boolean running = true;
