@@ -2,6 +2,9 @@ package com.multithreading.demo;
 
 import static com.multithreading.Common.hello;
 
+/**
+ * Creating new thread by extending Thread class
+ */
 class Runner extends Thread {
 
     public void run() {
