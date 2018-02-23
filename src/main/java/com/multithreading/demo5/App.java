@@ -1,5 +1,8 @@
 package com.multithreading.demo5;
 
+/**
+ * Using synchronized keyword
+ */
 public class App {
 
     private int count = 0;
