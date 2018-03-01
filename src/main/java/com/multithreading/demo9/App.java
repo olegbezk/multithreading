@@ -14,7 +14,7 @@ public class App {
 
     private static BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(10);
 
-    // generate random string 10 digits-long string value thread-safe value
+    // generate random string 10 digits-long string thread-safe value
     private final static String ID = Stream.generate(() -> String
             .valueOf(ThreadLocalRandom.current().nextInt(1,10))).limit(10)
             .collect(Collectors.joining());
