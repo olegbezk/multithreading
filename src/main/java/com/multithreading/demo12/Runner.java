@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 /**
  * Re-entrant locks
  */
-public class Runner {
+class Runner {
 
     private int count;
 
