@@ -62,6 +62,7 @@ public class Runner {
             }
             finally {
                 if (gotFirstLock && gotSecondLock) {
+                    //noinspection ReturnInsideFinallyBlock
                     return;
                 }
 
