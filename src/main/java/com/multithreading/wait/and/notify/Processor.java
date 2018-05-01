@@ -2,7 +2,7 @@ package com.multithreading.wait.and.notify;
 
 import java.util.Scanner;
 
-public class Processor {
+class Processor {
 
     public void produce() throws InterruptedException {
         synchronized (this) {

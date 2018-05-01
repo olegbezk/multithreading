@@ -9,7 +9,7 @@ public class App {
 
         Processor processor = new Processor();
 
-        Thread thread1 = new Thread(() -> {
+        final Thread thread1 = new Thread(() -> {
             try {
                 processor.produce();
             } catch (InterruptedException e) {
@@ -17,7 +17,7 @@ public class App {
             }
         });
 
-        Thread thread2 = new Thread(() -> {
+        final Thread thread2 = new Thread(() -> {
             try {
                 processor.consume();
             } catch (InterruptedException e) {
