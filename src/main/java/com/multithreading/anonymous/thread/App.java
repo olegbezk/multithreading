@@ -1,4 +1,4 @@
-package com.multithreading.demo3;
+package com.multithreading.anonymous.thread;
 
 import com.multithreading.Common;
 
