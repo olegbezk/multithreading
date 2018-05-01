@@ -1,4 +1,4 @@
-package com.multithreading.demo5;
+package com.multithreading.synch.keyword;
 
 /**
  * Using synchronized keyword
