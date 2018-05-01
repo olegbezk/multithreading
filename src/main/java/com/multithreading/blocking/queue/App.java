@@ -1,4 +1,4 @@
-package com.multithreading.demo9;
+package com.multithreading.blocking.queue;
 
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
