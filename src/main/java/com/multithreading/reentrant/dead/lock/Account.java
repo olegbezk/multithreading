@@ -1,4 +1,4 @@
-package com.multithreading.demo13;
+package com.multithreading.reentrant.dead.lock;
 
 public class Account {
 

@@ -1,4 +1,4 @@
-package com.multithreading.demo13;
+package com.multithreading.reentrant.dead.lock;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
