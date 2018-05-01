@@ -1,4 +1,4 @@
-package com.multithreading.demo12;
+package com.multithreading.reentrant.lock;
 
 /**
  * Re-entrant locks
