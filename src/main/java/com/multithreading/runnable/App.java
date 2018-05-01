@@ -1,4 +1,4 @@
-package com.multithreading.demo2;
+package com.multithreading.runnable;
 
 import static com.multithreading.Common.hello;
 
