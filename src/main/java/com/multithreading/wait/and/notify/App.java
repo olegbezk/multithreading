@@ -1,4 +1,4 @@
-package com.multithreading.demo10;
+package com.multithreading.wait.and.notify;
 
 /**
  * Wait and notify
