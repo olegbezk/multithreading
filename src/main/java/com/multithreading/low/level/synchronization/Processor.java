@@ -1,4 +1,4 @@
-package com.multithreading.demo11;
+package com.multithreading.low.level.synchronization;
 
 import java.util.ArrayList;
 import java.util.List;

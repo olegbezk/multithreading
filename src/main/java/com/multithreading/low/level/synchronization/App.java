@@ -1,4 +1,4 @@
-package com.multithreading.demo11;
+package com.multithreading.low.level.synchronization;
 
 public class App {
 
