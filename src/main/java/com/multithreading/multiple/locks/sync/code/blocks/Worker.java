@@ -1,4 +1,4 @@
-package com.multithreading.demo6;
+package com.multithreading.multiple.locks.sync.code.blocks;
 
 import java.util.ArrayList;
 import java.util.List;

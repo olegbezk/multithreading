@@ -1,4 +1,4 @@
-package com.multithreading.demo6;
+package com.multithreading.multiple.locks.sync.code.blocks;
 
 /**
  * Using multiple locks and synchronized code blocks
