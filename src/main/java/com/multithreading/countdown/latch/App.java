@@ -1,4 +1,4 @@
-package com.multithreading.demo8;
+package com.multithreading.countdown.latch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
