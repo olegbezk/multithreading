@@ -1,4 +1,4 @@
-package com.multithreading.demo;
+package com.multithreading.extending.thread;
 
 import static com.multithreading.Common.hello;
 
