@@ -1,4 +1,4 @@
-package com.multithreading.demo7;
+package com.multithreading.thread.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,7 +23,7 @@ class Processor implements Runnable {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-
+            e.printStackTrace();
         }
 
         System.out.println("Completed: " + id);
@@ -45,7 +45,7 @@ public class App {
         try {
             executor.awaitTermination(1, TimeUnit.DAYS);
         } catch (InterruptedException e) {
-
+            e.printStackTrace();
         }
 
         System.out.println("All tasks completed.");
