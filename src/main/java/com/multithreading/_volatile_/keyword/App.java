@@ -1,9 +1,9 @@
-package com.multithreading.demo4;
+package com.multithreading._volatile_.keyword;
 
 import java.util.Scanner;
 
 /**
- * Using volatile keyword for sharing variable in the thread
+ * Using volatile keyword for sharing variable with a threads
  */
 class Processor extends Thread {
 
