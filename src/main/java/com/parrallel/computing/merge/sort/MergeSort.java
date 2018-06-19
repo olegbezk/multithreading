@@ -3,11 +3,47 @@ package com.parrallel.computing.merge.sort;
 public class MergeSort {
 
     private int[] nums;
+
     private int[] tempArray;
 
     public MergeSort(final int[] nums) {
         this.nums = nums;
         this.tempArray = new int[nums.length];
+    }
+
+    public void parallelMergeSort(int low, int high, int numOfThreads) {
+
+        if (numOfThreads <= 1) {
+            mergeSort(low, high);
+            return;
+        }
+
+        int middleIndex = (low + high) / 2;
+
+        Thread leftSorter = mergeSortParallel(low, middleIndex, numOfThreads);
+        Thread rightSorter = mergeSortParallel(middleIndex + 1, high, numOfThreads);
+
+        leftSorter.start();
+        rightSorter.start();
+
+        try {
+            leftSorter.join();
+            rightSorter.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        merge(low, middleIndex, high);
+    }
+
+    public Thread mergeSortParallel(int low, int high, int numOfThreads) {
+        return new Thread() {
+
+            @Override
+            public void run() {
+                parallelMergeSort(low, high, numOfThreads / 2);
+            }
+        };
     }
 
     public void mergeSort(int low, int high) {

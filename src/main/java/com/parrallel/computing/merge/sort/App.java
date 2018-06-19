@@ -4,18 +4,40 @@ import java.util.Random;
 
 public class App {
 
+    public static Random random = new Random();
+
     public static void main(String[] args) {
-        Random random = new Random();
 
-        int[] nums = new int[30];
+        final int numOfThreads = Runtime.getRuntime().availableProcessors();
 
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(1000) - 500;
+        System.out.println("Number of threads: " + numOfThreads + "\n");
+
+        int[] numbers = createRandomArray();
+
+        //  O(N logN) complexity
+        MergeSort mergeSort = new MergeSort(numbers);
+
+        long startTime1 = System.currentTimeMillis();
+        mergeSort.parallelMergeSort(0, numbers.length -1, numOfThreads);
+        long endTime1 = System.currentTimeMillis();
+
+        System.out.printf("Time taken for 200 000 000 elements parallel =>  %6d ms \n", endTime1 - startTime1);
+        System.out.println("\n");
+
+        startTime1 = System.currentTimeMillis();
+        mergeSort.mergeSort(0,numbers.length-1);
+        endTime1 = System.currentTimeMillis();
+
+        System.out.printf("Time taken for 200 000 000 elements sequential =>  %6d ms \n", endTime1 - startTime1);
+        System.out.println("\n");
+    }
+
+    private static int[] createRandomArray() {
+        int amount = 200000000;
+        int[] a = new int[amount];
+        for (int i = 0; i < amount; i++) {
+            a[i] = random.nextInt(100000);
         }
-
-        //  O(N logN)
-        MergeSort mergeSort = new MergeSort(nums);
-        mergeSort.mergeSort(0, nums.length - 1);
-        mergeSort.showResult();
+        return a;
     }
 }
