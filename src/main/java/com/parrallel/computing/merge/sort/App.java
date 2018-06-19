@@ -6,13 +6,15 @@ public class App {
 
     public static Random random = new Random();
 
+    private static final int AMOUNT_OF_NUMBERS = 200000000;
+
     public static void main(String[] args) {
 
         final int numOfThreads = Runtime.getRuntime().availableProcessors();
 
         System.out.println("Number of threads: " + numOfThreads + "\n");
 
-        int[] numbers = createRandomArray();
+        int[] numbers = createRandomArray(AMOUNT_OF_NUMBERS);
 
         //  O(N logN) complexity
         MergeSort mergeSort = new MergeSort(numbers);
@@ -32,8 +34,7 @@ public class App {
         System.out.println("\n");
     }
 
-    private static int[] createRandomArray() {
-        int amount = 200000000;
+    private static int[] createRandomArray(int amount) {
         int[] a = new int[amount];
         for (int i = 0; i < amount; i++) {
             a[i] = random.nextInt(100000);
