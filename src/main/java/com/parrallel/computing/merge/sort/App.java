@@ -20,6 +20,7 @@ public class App {
         MergeSort mergeSort = new MergeSort(numbers);
 
         long startTime1 = System.currentTimeMillis();
+        // will be faster then sequential sort on big data amounts
         mergeSort.parallelMergeSort(0, numbers.length -1, numOfThreads);
         long endTime1 = System.currentTimeMillis();
 
